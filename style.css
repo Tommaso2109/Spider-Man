@@ -1,0 +1,1524 @@
+@media (max-width: 768px) {
+    .text-contatti {
+        display: block !important;
+    }
+}
+@media (max-width: 768px) {
+    .menu li ul {
+        display: none !important;
+    }
+    .menu li:hover ul {
+        display: none !important;
+    }
+}
+
+/* Loader Animation Styles */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #111;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.6s ease;
+}
+
+body.loaded #loader-wrapper {
+    opacity: 0;
+    pointer-events: none;
+}
+
+/*base style*/
+body{font-family: 'Inter', sans-serif;font-style: 16px;}
+
+a{text-decoration: none;}
+
+h1, h2, h3, h4, h5, p{color: black;padding-bottom: 30px;}
+
+p{line-height: 30px; color: #666; font-weight: 300; font-size: 23px;}
+
+.big-text{font-size: 70px;font-weight: 900;}
+.alf-big-text{font-size: 50px;font-weight: 900;}
+.medium-text{font-size: 40px;font-weight: 600;}
+.normal-text{font-size: 20px;}
+.small-text{font-size: 14px;}
+
+.intro-text{font-style: 20px;text-transform: uppercase;font-weight: bold;}
+
+.button{padding: 15px 15px; background: black; color: white; border-radius: 4px;display: inline-block}
+
+.text-contatti{ font-size: 20px; display:none !important;}
+
+/* Al termine del file o dopo tutte le regole, aggiungi questa media query per sovrascrivere la visibilità su mobile */
+@media (max-width: 768px) {
+    .text-contatti {
+        display: block !important;
+    }
+}
+
+@media(max-width:768px){
+    .big-text{font-size: 40px;font-weight: 900;}
+    .alf-big-text{font-size: 20px; font-weight: 900;}
+}
+
+/* header*/
+.heder{
+    width: 100%;
+    position:fixed;
+    z-index: 1;
+    top:0;
+    left: 50%;
+    transform: translatex(-50%);
+    padding: 20px;
+    display: flex;
+    max-width: 100%;
+    background:linear-gradient(0deg, rgba(0,0,0,.6), rgba(0,0,0,0.6));
+
+}
+
+.logo{
+    z-index: 1;
+}
+
+.menu{
+    
+    z-index: 0;
+    width: 100%;
+    transition: all 1s cubic-bezier(.215, .61, .255, 1);
+
+}
+
+.menu li{display: inline-block;}
+.menu li a{color: white; padding: 15px; display: block;}
+.menu ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.menu a
+{
+    display: block;
+    padding: 5px;
+    color: #000;
+    text-decoration: none;
+}
+.menu a:hover {
+    background-color:red;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.cta a:hover {
+    background-color:red;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.menu li ul {
+    display: none;
+}
+
+.menu li:hover ul {
+    display: block;
+    position: absolute;
+    z-index:1;
+    width:250px;
+    padding: 0;
+    margin: 0 0 0 -1px;
+    background: linear-gradient(0deg, rgba(0,0,0,.6), rgba(0,0,0,0.6));
+}
+
+.menu li li { border:none; width: 250px;}
+.menu li li a { padding:10px 3px;}
+.hamburger{display: none;}
+
+@media(max-width:768px){
+    .cta{display: none;}
+    .menu{position: absolute; top: 0; right: -100%; background: rgb(126, 0, 0);height: 100vh; padding-top: 80px;z-index: 2;}
+    .menu li {display: block;}
+    .menu li a{padding: 15px 30px ; font-size: 30px; font-weight: 600;z-index: 1;}
+
+    .menu--open{right:0%;}
+    .hamburger{ 
+        display: block;
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        top: 40px;
+        right: 30px;
+        z-index: 2;
+    }
+    .hamburger span{z-index:2; background: white; height: 3px;width: 100%; display: block;margin-bottom: 5px;}
+}
+
+/* hero */
+
+.hero-telefono{display: none;}
+
+.hero{
+    position: relative;
+    height: 100vh;
+    display: flex;width: 100%;align-items: center;
+    background-size: cover;
+    overflow: hidden;
+    z-index:0;
+}
+#video{
+    position:absolute;
+    top:0;
+    left:0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;   
+}
+.hero::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top:0;
+    left:0;
+    background: #000;
+    opacity: 0.3;
+}
+
+.hero--contatti{
+    position: relative;
+    height: 100vh;
+    display: flex;width: 100%;align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.2), rgba(0,0,0,0.5)), url('media/cover-contatti.png')no-repeat center center;
+    background-size: cover;
+    z-index:0;
+}
+
+@media(max-width:768px){
+    .hero{display: none;}
+    .hero-telefono{
+        height: 100vh;
+        display: flex;width: 100%;align-items: center;
+        background: linear-gradient(0deg, rgba(0,0,0,.2), rgba(0,0,0,0.5)), url('media/home_telefono.jpeg')no-repeat center center;
+        background-size: cover;
+    }
+
+    .hero--contatti{
+        position: relative;
+        height: 100vh;
+        display: flex;width: 100%;align-items: center;
+        background: linear-gradient(0deg, rgba(0,0,0,.2), rgba(0,0,0,0.5)), url('media/cover-contatti-telefono.jpg')no-repeat center center;
+        background-size: cover;
+        z-index:0;
+    }
+
+    .hero-telefono__content {
+        width: 100%;
+        max-width: 1350px;
+        margin: 0 auto;
+        padding: 30px;
+    }
+    
+    .hero-telefono__content h1,
+    .hero-telefono__content p {color:white;position:relative;}
+    
+
+    
+}
+
+
+
+.hero--ag{
+    position: relative;
+    height: 100vh;
+    display: flex;width: 100%;align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.2), rgba(0,0,0,0.5)), url('media/andrew.webp')no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    z-index:0;
+}
+.hero--th{
+    position: relative;
+    height: 100vh;
+    display: flex;width: 100%;align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.2), rgba(0,0,0,0.5)), url('media/tom.jpeg')no-repeat center center;
+    background-size: cover;
+    overflow: hidden;
+    z-index:0;
+}
+.hero--tm{
+    position: relative;
+    height: 100vh;
+    display: flex;width: 100%;align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.2), rgba(0,0,0,0.5)), url('media/tobey.webp')no-repeat center center;
+    background-size: cover;
+    z-index:0;
+}
+.hero--mcu{
+    position: relative;
+    height: 100vh;
+    display: flex;width: 100%;align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,0.7)), url('media/mcu.jpg')no-repeat center center;
+    background-size: cover;
+    z-index:0;
+}
+
+.hero--sp{
+    position: relative;
+    height: 100vh;
+    display: flex;width: 100%;align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,0.7)), url('media/fumetti_sp.jpg')no-repeat center center;
+    background-size: cover;
+    z-index:0;
+}
+.hero--tha2{
+    position: relative;
+    height: 100vh;
+    display: flex;width: 100%;align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,0.7)), url('media/tha2_imm.avif')no-repeat center center;
+    background-size: cover;
+    z-index:0;
+}
+.hero--tha1{
+    position: relative;
+    height: 100vh;
+    display: flex;width: 100%;align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,0.7)), url('media/tha1_imm.avif')no-repeat center center;
+    background-size: cover;
+    z-index:0;
+}
+
+.hero--ca{
+    position: relative;
+    height: 100vh;
+    display: flex;width: 100%;align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,0.7)), url('media/civilwar.avif')no-repeat center center;
+    background-size: cover;
+    z-index:0;
+}
+
+.hero--ed{
+    position: relative;
+    height: 100vh;
+    display: flex;width: 100%;align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,0.7)), url('media/endgame_imm.jpg')no-repeat center center;
+    background-size: cover;
+    z-index:0;
+}
+
+.hero--iw{
+    position: relative;
+    height: 100vh;
+    display: flex;width: 100%;align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,0.7)), url('media/iw_imm.jpg')no-repeat center center;
+    background-size: cover;
+    z-index:0;
+}
+
+.hero--th1{
+    position: relative;
+    height: 100vh;
+    display: flex;width: 100%;align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,0.7)), url('media/homecoming_imm.jpg')no-repeat center center;
+    background-size: cover;
+    z-index:0;
+}
+
+.hero--th2{
+    position: relative;
+    height: 100vh;
+    display: flex;width: 100%;align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,0.7)), url('media/FarFromHome.jpg')no-repeat center center;
+    background-size: cover;
+    z-index:0;
+}
+
+.hero--th3{
+    position: relative;
+    height: 100vh;
+    display: flex;width: 100%;align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,0.7)), url('media/NoWayHome_imm.webp')no-repeat center center;
+    background-size: cover;
+    z-index:0;
+}
+
+.hero--tm1{
+    position: relative;
+    height: 100vh;
+    display: flex;width: 100%;align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,0.7)), url('media/spiderma_tm_imm.webp')no-repeat center center;
+    background-size: cover;
+    z-index:0;
+}
+
+.hero--tm2{
+    position: relative;
+    height: 100vh;
+    display: flex;width: 100%;align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,0.7)), url('media/spidema_tm2_imm.jpg')no-repeat center center;
+    background-size: cover;
+    z-index:0;
+}
+
+.hero--tm3{
+    position: relative;
+    height: 100vh;
+    display: flex;width: 100%;align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,0.7)), url('media/spiderman_tm3_imm.webp')no-repeat center center;
+    background-size: cover;
+    z-index:0;
+}
+
+.hero--f{
+    position: relative;
+    height: 100vh;
+    display: flex;width: 100%;align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,0.7)), url('media/simpbolo_sp.jpg')no-repeat center center;
+    background-size: cover;
+    z-index:0;
+}
+
+
+.hero__content {
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 30px;
+}
+
+.hero--ms{
+    position: relative;
+    height: 100vh;
+    display: flex;width: 100%;align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,0.7)), url('media/intothespiderverse.webp')no-repeat center center;
+    background-size: cover;
+    z-index:0;
+}
+
+.hero--ms2{
+    position: relative;
+    height: 100vh;
+    display: flex;width: 100%;align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,0.7)), url('media/spider-man-across-the-spider-verse-banner.jpg')no-repeat center center;
+    background-size: cover;
+    z-index:0;
+}
+.hero__content h1,
+.hero__content p {color:white;position:relative; z-index: 1;}
+
+/*poster*/
+
+.poster{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items:center;
+}
+
+.poster__img{
+    width: 65%;
+    height: 100%;
+}
+
+.poster__img img{
+    object-fit: cover; 
+    width: 100%;height: 100%;;
+}
+
+.poster__content{
+    width: 35%;
+    padding: 50px;
+
+}
+
+@media(max-width:768px){
+    .poster{
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .poster__img,
+    .poster__content{
+        width: 100%;    
+    }
+    
+
+}
+
+/*poster2*/
+.poster2__telefono {display: none;}
+
+.poster2{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items:center;
+}
+
+.poster2__img{
+    width: 65%;
+    height: 100%;
+}
+
+.poster2__img img{
+    object-fit: cover; 
+    width: 100%;height: 100%;
+}
+
+.poster2__content{
+    width: 35%;
+    padding: 50px;
+
+}
+
+@media(max-width:768px){
+    .poster2 {display: none;}
+
+    .poster2__telefono{
+        
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        align-items:center;
+    }
+    
+
+    .poster2__telefono__img{
+        width: 65%;
+        height: 100%;
+    }
+    
+    .poster2__telefono__img img{
+        object-fit: cover; 
+        width: 100%;
+        height: 100%;
+    }
+
+    .poster2__telefono__content{
+        width: 100%;
+        padding: 50px;
+    
+    }
+    
+
+    .poster2__telefono{
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .poster2__telefono__img{
+        width: 100%;
+    }
+    .poster2_telefono__content{
+        width: 100%;    
+    }
+    
+
+}
+
+/*poster3*/
+
+.poster3{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items:center;
+}
+
+.poster3__img{
+    width: 65%;
+    height: 100%;
+}
+
+.poster3__img img{
+    object-fit: cover; 
+    width: 100%;height: 100%;;
+}
+
+.poster3__content{
+    width: 35%;
+    padding: 50px;
+
+}
+
+@media(max-width:768px){
+    .poster3{
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .poster3__img,
+    .poster3__content{
+        width: 100%;    
+    }
+    
+
+}
+/*poster4*/
+.poster4__telefono {display: none;}
+
+.poster4{
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    align-items:center;
+}
+
+.poster4__img{
+    width: 65%;
+    height: 100%;
+}
+
+.poster4__img img{
+    object-fit: cover; 
+    width: 100%;height: 100%;
+}
+
+.poster4__content{
+    width: 35%;
+    padding: 50px;
+
+}
+
+@media(max-width:768px){
+    .poster4 {display: none;}
+
+    .poster4__telefono{
+        display: flex;
+        height: 100vh;
+        width: 100%;
+        align-items:center;
+    }
+    
+
+    .poster4__telefono__img{
+        width: 65%;
+        height: 100%;
+    }
+    
+    .poster4__telefono__img img{
+        object-fit: cover; 
+        width: 100%;
+        height: 100%;
+    }
+
+    .poster4__telefono__content{
+        width: 100%;
+        padding: 50px;
+    
+    }
+    
+
+    .poster4__telefono{
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .poster4__telefono__img{
+        width: 100%;
+    }
+    .poster4_telefono__content{
+        width: 100%;    
+    }    
+
+}
+
+
+
+
+@media(max-width:768px){
+    .postercontatti{
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .poster-contatti__img,
+    .poster-contatti__content{
+        width: 100%;    
+    }
+    
+
+}
+
+
+/*bg-cover*/
+
+.bg-cover{
+    height: 100vh;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.2), rgba(0,0,0,0.5)), url('media/bg-marvel.jpg')no-repeat center center;
+    background-size: cover; 
+    align-items: center; 
+    padding-left: 10%;
+   
+}
+
+
+
+.bg-cover__title{width: 50%;}
+
+.bg-cover__title h1 {color: azure;}
+
+.bg-cover__title a { background-color:white;color:#000;}
+
+
+@media(max-width:768px){
+    .bg-cover{
+        height: 100vh;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        background: linear-gradient(0deg, rgba(0,0,0,.2), rgba(0,0,0,0.5)), url('media/bg-marvel-telefono.jpg')no-repeat center center;
+        background-size: cover; 
+        align-items: center; 
+        padding-left: 10%;
+       
+    }  
+
+}
+/*bgM*/
+.bgM-cover{
+    height: 100vh;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.2), rgba(0,0,0,0.5)), url('media/intothespiderverse.webp')no-repeat center center;
+    background-size: cover; 
+    align-items: center; 
+    padding-left: 10%;
+   
+}
+
+
+
+.bgM-cover__title{width: 50%;}
+
+.bgM-cover__title h1 {color: azure;}
+
+.bgM-cover__title a { background-color:white;color:#000;}
+
+
+@media(max-width:768px){
+    .bgM-cover{
+        height: 100vh;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        background: linear-gradient(0deg, rgba(0,0,0,.2), rgba(0,0,0,0.5)), url('media/intothespiderverse.jpg')no-repeat center center;
+        background-size: cover; 
+        align-items: center; 
+        padding-left: 10%;
+       
+    }  
+
+}
+
+/*bgM2*/
+.bgM2-cover{
+    height: 100vh;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.2), rgba(0,0,0,0.5)), url('media/spider-man-across-the-spider-verse-banner.jpg')no-repeat center center;
+    background-size: cover; 
+    align-items: center; 
+    padding-left: 10%;
+   
+}
+
+
+
+.bgM2-cover__title{width: 50%;}
+
+.bgM2-cover__title h1 {color: azure;}
+
+.bgM2-cover__title a { background-color:white;color:#000;}
+
+
+@media(max-width:768px){
+    .bgM2-cover{
+        height: 100vh;
+        display: flex;
+        width: 100%;
+        align-items: center;
+        background: linear-gradient(0deg, rgba(0,0,0,.2), rgba(0,0,0,0.5)), url('media/acrossthespiderverse.jpg')no-repeat center center;
+        background-size: cover; 
+        align-items: center; 
+        padding-left: 10%;
+       
+    }  
+
+}
+
+/*grid*/
+
+.grid{
+    display: flex;
+    max-width: 1350px;
+    padding: 0 30px;
+    margin: 0 auto; 
+    align-self: center;
+    text-align: center;
+} 
+
+.grid .col{
+    width: 100%;
+}
+
+@media(max-width:768px){
+    .grid{flex-wrap: wrap;}
+
+}
+
+/*slider*/
+.main-carousel{
+    padding: 40 px 0;
+    position: fixed;
+}
+
+.carousel-cell{
+    height: 350px;
+    width: 100%;
+    display: flex ;
+}
+
+
+
+.carousel-cell{
+    display: flex;
+    height: 350px;
+    width: 50%;
+    align-items:center;
+}
+
+.cell__immagine{
+    width: 65%;
+    height: 100%;
+}
+
+.cell__immagine img{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    object-fit:contain; 
+    width: 100%;height: 100%;
+}
+
+.cell_titolo{
+    width: 50%;
+    padding-right: 25%;
+
+}
+@media(max-width:768px){
+    .main-carousel{
+        padding: 40 px 0;
+    }
+    
+    .carousel-cell{
+        height: 200px;
+        width: 100%;
+        display: flex ;
+    }
+    
+    
+    
+    .carousel-cell{
+        display: flex;
+        height: 350px;
+        width: 100%;
+        align-items:center;
+    }
+    
+    .cell__immagine{
+        width: 65%;
+        height: 70%;
+        align-items: center;
+        padding-left: 5px;
+    }
+    
+    .cell__immagine img{
+        padding-top: 5px;
+        padding-bottom: 5px;
+        object-fit:contain; 
+        width: 80%;height: 80;
+        
+    }
+    
+    .cell_titolo{
+        width: 50%;
+        padding-right: 25%;
+    
+    }
+}
+
+
+
+/*footers*/
+footer {
+    background-color: #ff0f0f;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    text-shadow:
+        -1px -1px 0 #000, /* Contorno in alto a sinistra */
+        1px -1px 0 #000, /* Contorno in alto a destra */
+        -1px 1px 0 #000, /* Contorno in basso a sinistra */
+        1px 1px 0 #000;
+}
+.col img{height: 50px;width: 50px;}
+.col p{color: rgb(255, 255, 255);font-weight: 500;}
+.social{
+    display: flex;
+    justify-content: center;
+}
+
+/*posterfilm*/
+
+.poster_film{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items:center;
+}
+
+.poster_film__img{
+    width: 45%;
+    height: 100%;
+    padding: 6.5%;
+}
+
+.poster_film__img img{
+    object-fit: cover; 
+    width: 100%;height: 100%;
+    align-self: center;
+}
+
+.poster_film__content{
+    width: 45%;
+    padding: 50px;
+
+}
+
+.poster_film_voto{
+    width: 45%;
+    padding: 50px;
+}
+
+@media(max-width:768px){
+    .poster_film{
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .poster__img,
+    .poster__content{
+        width: 100%;    
+    }
+    
+
+}
+
+/*biografia*/
+.biografia{   
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    
+}
+.biografia h1{text-align: center;}
+.biografia h2{font-size: 35px;}
+
+/*trailer*/
+.trailer{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 65vh;
+    text-align: center;
+    box-align: center;
+}
+
+
+/*trama*/
+.trama{
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+}
+
+.trama h1{
+    text-align: center;
+
+}
+
+/*storia*/
+.titolo{
+    width: 70%;
+    display: flex;
+    height: 100%;
+    align-items:center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.nascita{
+    width: 70%;
+    display: flex;
+    height: 100%;
+    align-items:center;
+    margin-left: auto;
+    margin-right: auto;
+}
+.nascita__content p{
+    width: 75%;
+    padding-left: 5%;
+}
+.nascita_video{
+    width: 15%;
+    height: 100%;
+}
+.nascita_video video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+/*mcu*/
+
+
+
+/*helpers*/
+.mt-0{margin-top: 25px;}
+.mt-1{margin-top: 50px;} 
+.mt-2{margin-top: 100px;}
+.mt-3{margin-top: 150px;}
+.mt-4{margin-top: 250px;}
+
+
+
+
+*,
+*:before,
+*:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+/* --- Responsive per film.html e spiderman.html --- */
+@media (max-width: 768px) {
+  /* Poster film responsive */
+  .poster_film {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+  .poster_film__img,
+  .poster_film__content,
+  .poster_film_voto {
+    width: 100%;
+    padding: 20px 10px;
+    box-sizing: border-box;
+  }
+  .poster_film__img {
+    padding: 0;
+  }
+  .poster_film__content {
+    padding: 10px 10px;
+  }
+  .poster_film_voto {
+    padding: 10px 10px;
+  }
+
+  /* Spiderman storia responsive */
+  .titolo,
+  .nascita {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .titolo h1,
+  .nascita__content p {
+    width: 100%;
+    padding: 0 10px;
+    text-align: center;
+  }
+  .nascita_video {
+    width: 100%;
+    margin: 0 auto 20px auto;
+  }
+  .nascita_video video {
+    width: 100%;
+    height: auto;
+  }
+  .nascita__content {
+    width: 100%;
+    padding: 0 10px;
+  }
+  /* Biografia e trama responsive */
+  .biografia, .trama {
+    width: 98%;
+    padding: 0 1%;
+  }
+  .trailer {
+    width: 100%;
+    height: auto;
+    padding: 0 10px;
+  }
+}
+
+
+/* From Uiverse.io by TechByElijah */ 
+.center {
+  position: absolute;
+  transform: translateX(-50%);
+  left: 50%;
+}
+
+.container {
+  height: 31.25em;
+  width: 21.87em;
+  top: 0;
+  margin-top: 0;
+}
+
+.rope {
+  height: 13.62em;
+  width: 0.15em;
+  background-color: #ffffff;
+  animation: swing 2s infinite;
+  top: 0;
+}
+
+@keyframes swing {
+  50% {
+    transform: translateY(-4em);
+  }
+}
+
+.legs {
+  height: 1.12em;
+  width: 7.5em;
+  background-color: transparent;
+  box-shadow: 0 0 0 0.12em #140243, 0 0 0 1.06em #1b1676, 0 0 0 1.18em #140243;
+  top: 12.5em;
+  border-radius: 3.12em;
+}
+
+.boot-l,
+.boot-r {
+  height: 1.25em;
+  width: 2.5em;
+  background-color: #e32832;
+  position: absolute;
+  border: 0.12em solid #140243;
+  bottom: 1.12em;
+}
+
+.boot-l {
+  left: 1em;
+}
+
+.boot-r {
+  transform: rotateY(180deg);
+  left: 3.81em;
+}
+
+.boot-l:before,
+.boot-r:before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 1.12em solid #140243;
+  border-left: 1.18em solid transparent;
+  bottom: 1.31em;
+  left: 1.46em;
+}
+
+.boot-l:after,
+.boot-r:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-bottom: 1.12em solid #e32832;
+  border-left: 1em solid transparent;
+  right: 0;
+  top: -0.93em;
+}
+
+.costume {
+  height: 6.25em;
+  width: 5.62em;
+  background: linear-gradient(
+    to right,
+    #1b1676 20%,
+    #e32832 20%,
+    #e32832 80%,
+    #1b1676 80%
+  );
+  border: 0.12em solid #140243;
+  top: 14.68em;
+}
+
+.spider {
+  height: 1.87em;
+  width: 0.93em;
+  background-color: #140243;
+  border-radius: 45%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: calc(50% + 0.93em);
+  left: 50%;
+}
+
+.s1,
+.s3 {
+  height: 7.5em;
+  width: 2.5em;
+  border-radius: 0 0 1.37em 1.37em;
+  border-bottom: 0.12em solid #140243;
+  position: absolute;
+}
+
+.s2,
+.s4 {
+  height: 7.5em;
+  width: 3.12em;
+  border-radius: 0 0 1.56em 1.56em;
+  border-bottom: 0.12em solid #140243;
+  position: absolute;
+}
+
+.s1,
+.s2,
+.s3,
+.s4 {
+  left: 50%;
+}
+
+.s1 {
+  bottom: 1.43em;
+}
+
+.s2 {
+  bottom: 0.93em;
+}
+
+.s3,
+.s4 {
+  transform: translateX(-50%) rotateX(180deg);
+}
+
+.s3 {
+  top: 1.43em;
+}
+
+.s4 {
+  top: 0.93em;
+}
+
+.belt {
+  height: 0.43em;
+  width: 5.87em;
+  background-color: #e32832;
+  border: 0.12em solid #140243;
+  top: -0.12em;
+}
+
+.hand-r,
+.hand-l {
+  height: 8.12em;
+  background: linear-gradient(
+    #e32832 4.6em,
+    #140243 4.6em,
+    #140243 4.75em,
+    #1b1676 4.75em,
+    #1b1676 8.12em
+  );
+  width: 1.12em;
+  border: 0.12em solid #140243;
+  border-radius: 1.25em;
+  position: absolute;
+  transform-origin: bottom;
+  bottom: -0.12em;
+}
+
+.hand-r {
+  right: -0.75em;
+  transform: rotate(-22deg);
+}
+
+.hand-l {
+  left: -0.75em;
+  transform: rotate(22deg);
+}
+
+.neck {
+  height: 0.37em;
+  width: 1.25em;
+  background-color: #e32832;
+  bottom: -0.62em;
+  border: 0.12em solid #140243;
+}
+
+.mask {
+  height: 4.65em;
+  width: 4.06em;
+  background-color: #e32832;
+  border-radius: 50% 50% 50% 50% / 54% 54% 46% 46%;
+  border: 0.12em solid #140243;
+  top: 6.56em;
+}
+
+.eye-l,
+.eye-r {
+  height: 0.68em;
+  width: 1.37em;
+  background-color: #ffffff;
+  border-radius: 1.37em 1.37em 0 0;
+  border: 0.12em solid #140243;
+  position: absolute;
+  top: 2.1em;
+}
+
+.eye-l {
+  left: 0.3em;
+}
+
+.eye-r {
+  right: 0.3em;
+}
+
+.cover {
+  height: 3.12em;
+  width: 0.15em;
+  background-color: #ffffff;
+  bottom: 8.12em;
+}
+
+@media screen and (min-width: 600px) {
+  .container {
+    font-size: 20px;
+  }
+}
+
+.loader-bar {
+  width: calc(160px / 0.707);
+  height: 28px;
+  background: repeating-linear-gradient(-45deg, #e32832 0 30px,#140243 0 40px) left/200% 100%;
+  animation: i3 2s infinite linear;
+  border-radius: 10px;
+  border: 1px solid #ffffff;
+  margin-top: 150px;
+}
+
+@keyframes i3 {
+  100% {
+    background-position: right
+  }
+}
+
+/* Contact Section Styles */
+.contact-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+}
+
+.contact-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.contact-info {
+  padding: 20px;
+}
+
+.contact-info .big-text {
+  color: #e32832;
+  margin-bottom: 20px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  margin: 40px 0;
+  padding: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(227, 40, 50, 0.2);
+}
+
+.contact-icon {
+  font-size: 40px;
+  margin-right: 20px;
+  min-width: 60px;
+  text-align: center;
+}
+
+.contact-details h3 {
+  color: #140243;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.contact-link {
+  color: #e32832;
+  font-size: 18px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #140243;
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  padding: 10px 20px;
+  background: #e32832;
+  color: white;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.social-btn:hover {
+  background: #140243;
+  transform: scale(1.05);
+}
+
+.contact-form-wrapper {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contact-form-wrapper .big-text {
+  color: #e32832;
+  margin-bottom: 30px;
+  font-size: 50px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: #140243;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 15px;
+  border: 2px solid #e8e8e8;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #e32832;
+  box-shadow: 0 0 0 3px rgba(227, 40, 50, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.submit-btn {
+  background: #e32832;
+  color: white;
+  border: none;
+  padding: 18px 40px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+  align-self: flex-start;
+}
+
+.submit-btn:hover {
+  background: #140243;
+  transform: translateY(-2px);
+}
+
+/* Responsive Contact Section */
+@media (max-width: 768px) {
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .contact-section {
+    padding: 40px 15px;
+  }
+  
+  .contact-form-wrapper {
+    padding: 25px;
+  }
+  
+  .contact-form-wrapper .big-text {
+    font-size: 35px;
+  }
+  
+  .contact-info .big-text {
+    font-size: 35px;
+  }
+  
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .contact-icon {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  
+  .social-links {
+    justify-content: center;
+  }
+}
+  
+
+
+
