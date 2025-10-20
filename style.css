@@ -1,3 +1,29 @@
+/* Biografia box stile come trama */
+.bio-box {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    align-content: center;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.bio-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(227, 40, 50, 0.2);
+}
+@media (max-width: 768px) {
+  .bio-box {
+    width: 95%;
+    padding: 20px;
+  }
+  .bio-box:hover {
+    transform: none;
+  }
+}
 @media (max-width: 768px) {
     .text-contatti {
         display: block !important;
@@ -41,8 +67,8 @@ h1, h2, h3, h4, h5, p{color: black;padding-bottom: 30px;}
 
 p{line-height: 30px; color: #666; font-weight: 300; font-size: 23px;}
 
-.big-text{font-size: 70px;font-weight: 900;}
-.alf-big-text{font-size: 50px;font-weight: 900;}
+.big-text{font-size: 50px;font-weight: 900;}
+.alf-big-text{font-size: 35px;font-weight: 900;}
 .medium-text{font-size: 40px;font-weight: 600;}
 .normal-text{font-size: 20px;}
 .small-text{font-size: 14px;}
@@ -377,6 +403,7 @@ p{line-height: 30px; color: #666; font-weight: 300; font-size: 23px;}
     background: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,0.7)), url('media/simpbolo_sp.jpg')no-repeat center center;
     background-size: cover;
     z-index:0;
+    margin-bottom: 60px;
 }
 
 
@@ -401,6 +428,15 @@ p{line-height: 30px; color: #666; font-weight: 300; font-size: 23px;}
     height: 100vh;
     display: flex;width: 100%;align-items: center;
     background: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,0.7)), url('media/spider-man-across-the-spider-verse-banner.jpg')no-repeat center center;
+    background-size: cover;
+    z-index:0;
+}
+
+.hero--spider_serie{
+    position: relative;
+    height: 100vh;
+    display: flex;width: 100%;align-items: center;
+    background: linear-gradient(0deg, rgba(0,0,0,.4), rgba(0,0,0,0.7)), url('media/spider_serie_poster.jpg')no-repeat center center;
     background-size: cover;
     z-index:0;
 }
@@ -948,11 +984,32 @@ footer {
     margin-left: auto;
     margin-right: auto;
     align-content: center;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.trama:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(227, 40, 50, 0.2);
 }
 
 .trama h1{
     text-align: center;
+}
 
+.section-title {
+    font-size: 45px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 30px;
+    background: linear-gradient(135deg, #000000 0%, #000000 50%, #000000 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 /*storia*/
@@ -963,28 +1020,76 @@ footer {
     align-items:center;
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+    justify-content: center;
 }
+
+.titolo h1 {
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.titolo h1::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #e62429, #c41e3a);
+    border-radius: 2px;
+}
+
 .nascita{
     width: 70%;
-    display: flex;
-    height: 100%;
-    align-items:center;
     margin-left: auto;
     margin-right: auto;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 30px;
+    align-items: stretch;
 }
+
+.nascita__content {
+    flex: 1;
+}
+
 .nascita__content p{
-    width: 75%;
-    padding-left: 5%;
+    width: 100%;
+    padding: 0;
+    font-size: 23px;
+    line-height: 30px;
+    color: #666;
+    font-weight: 300;
+    padding-bottom: 30px;
 }
+
 .nascita_video{
-    width: 15%;
-    height: 100%;
+    flex: 0 0 400px;
+    width: 400px;
+    margin: 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-self: flex-start;
 }
+
+.nascita_video:hover {
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(227, 40, 50, 0.4);
+}
+
 .nascita_video video{
     width: 100%;
-    height: 100%;
+    height: auto;
     object-fit: cover;
-
+    display: block;
 }
 
 /*mcu*/
@@ -997,6 +1102,236 @@ footer {
 .mt-2{margin-top: 100px;}
 .mt-3{margin-top: 150px;}
 .mt-4{margin-top: 250px;}
+
+/* Film Grid Modern Layout */
+.films-grid-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 80px 30px 80px 30px;
+}
+
+.films-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 40px;
+    align-items: stretch;
+}
+
+.film-card {
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 20px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.film-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 20px 60px rgba(227, 40, 50, 0.3);
+}
+
+.film-card__image {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+}
+
+.film-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    transition: transform 0.5s ease;
+}
+
+.film-card:hover .film-card__image img {
+    transform: scale(1.1);
+}
+
+.film-card__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, transparent 100%);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.film-card:hover .film-card__overlay {
+    opacity: 1;
+}
+
+.film-rating {
+    background: rgba(227, 40, 50, 0.95);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 700;
+    backdrop-filter: blur(10px);
+}
+
+.special-badge {
+    background: rgba(20, 2, 67, 0.95);
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    backdrop-filter: blur(10px);
+}
+
+.film-card__content {
+    padding: 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.film-card__content h3 {
+    font-size: 24px;
+    font-weight: 900;
+    color: #000;
+    margin: 0;
+    padding: 0 0 10px 0;
+    line-height: 1.3;
+}
+
+.film-card__content p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666;
+    flex: 1;
+    margin: 0;
+    padding: 0;
+}
+
+.film-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: linear-gradient(135deg, #e32832 0%, #c41e3a 100%);
+    color: white;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.film-button:hover {
+    background: linear-gradient(135deg, #140243 0%, #1b1676 100%);
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(227, 40, 50, 0.4);
+}
+
+.featured-card {
+    grid-column: span 2;
+}
+
+.featured-card .film-card__image {
+    height: 450px;
+}
+
+.special-card {
+    border: 2px solid rgba(227, 40, 50, 0.3);
+}
+
+.special-card:hover {
+    border-color: rgba(227, 40, 50, 0.8);
+}
+
+/* Responsive Film Grid */
+@media (max-width: 1200px) {
+    .films-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 30px;
+    }
+    
+    .featured-card {
+        grid-column: span 1;
+    }
+    
+    .film-card__image,
+    .featured-card .film-card__image {
+        height: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .films-grid-container {
+        padding: 60px 15px 60px 15px;
+    }
+    
+    .films-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+    
+    .film-card__image,
+    .featured-card .film-card__image {
+        height: 400px;
+    }
+    
+    .film-card:hover {
+        transform: translateY(-8px);
+    }
+    
+    .film-card__content {
+        padding: 20px;
+    }
+    
+    .film-card__content h3 {
+        font-size: 20px;
+    }
+    
+    .film-card__content p {
+        font-size: 15px;
+    }
+    
+    .film-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .film-card__overlay {
+        opacity: 1;
+        background: linear-gradient(180deg, rgba(0,0,0,0.8) 0%, transparent 100%);
+    }
+}
+
+@media (max-width: 480px) {
+    .films-grid-container {
+        padding: 40px 15px 60px 15px;
+    }
+    
+    .film-card__image,
+    .featured-card .film-card__image {
+        height: 350px;
+    }
+    
+    .film-rating,
+    .special-badge {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}
 
 
 
@@ -1037,34 +1372,59 @@ footer {
   /* Spiderman storia responsive */
   .titolo,
   .nascita {
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    width: 95%;
     margin: 0 auto;
+    padding: 20px;
+    flex-direction: column;
   }
-  .titolo h1,
-  .nascita__content p {
-    width: 100%;
-    padding: 0 10px;
-    text-align: center;
+  
+  .titolo h1 {
+    font-size: 32px;
   }
+  
+  .titolo h1::after {
+    width: 60px;
+  }
+  
   .nascita_video {
+    flex: 1;
     width: 100%;
     margin: 0 auto 20px auto;
+    border-radius: 10px;
   }
+  
+  .nascita__content {
+    flex: 1;
+    width: 100%;
+  }
+  
+  .nascita__content p {
+    width: 100%;
+    padding: 15px 5px;
+    text-align: left;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+  
   .nascita_video video {
     width: 100%;
     height: auto;
   }
-  .nascita__content {
-    width: 100%;
-    padding: 0 10px;
-  }
+  
   /* Biografia e trama responsive */
   .biografia, .trama {
-    width: 98%;
-    padding: 0 1%;
+    width: 95%;
+    padding: 20px;
   }
+  
+  .section-title {
+    font-size: 32px;
+  }
+  
+  .trama:hover {
+    transform: none;
+  }
+  
   .trailer {
     width: 100%;
     height: auto;

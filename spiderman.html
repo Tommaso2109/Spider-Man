@@ -17,6 +17,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+    
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
 
 </head>
 <body>
@@ -46,6 +48,7 @@
                     <li><a href="th2.html">Spider-Man: FarFromHome</a></li>
                     <li><a href="th3.html">Spider-Man: NoWayHome</a></li>
                     <li><a href="miles2.html">Spider-Man: Across The <br/>Spider-Verse</a></li>
+                    <li><a href="spider_serie.html">Il Vostro Amichevole Spider-Man di Quartiere</a></li>
             </ul>
         </li>
         <li><a href="contatti.html" class="text-contatti">Contatti</a></li>
@@ -68,26 +71,27 @@
         </div>
     </div>
 
- <div class = "titolo mt-3">
+ <div class = "titolo mt-3 fade-in">
     <h1 class="alf-big-text">
         Com'è nato Spider-Man?
     </h1>
 </div>
 
- <div class="nascita mt-0">
+ <div class="nascita mt-0 slide-up">
     <div calss="nascita_video">    
         <video controls source src="media/Stan Lee The Real Spider-Man Truth Revealed!.mp4" type="video/mp4" height="650">
 
         </video>
     </div>
-    <div class ="nascita__content">
+    <div class ="nascita__content mt-1">
         <p>Spider Man nacque ufficialmente Il 10 agosto 1962, così come lo vedete scritto, senza trattino e con due parole separate. L'essenza del personaggio era già lì: era un adolescente problematico che viveva con sua zia e che aveva il problema che il mestiere del supereroe era troppo grande per lui. C'era già anche la mitica frase: "da grandi poteri derivano grandi responsabilità". Ma Spider-Man (il cui nome corretto definitivo è col trattino) è nato senza grandi aspettative. In realtà con aspettative prossime allo zero.<br/> <br/> Quando Stan Lee ha raccontato l'idea di Spider-Man al capo del suo team creativo, l'idea non è piaciuta per niente: non gli piaceva che fosse un adolescente e non gli piaceva che avesse qualcosa a che fare con gli aracnidi.<br/> <br/>Stan Lee pero decise di aggiungerlo lo stesso in Amazing Fantasy #15, una serie che era in crisi nera e che stava per chiudere così se non fosse piaciuto non sarebbe stato un grande problema. Ma tra i lettori il personaggio ebbe subito grande successo, e conquistò una nicchia nella griglia della serie Marvel, con il proprio titolo. </p>
     </div>
     
  </div>
 
 
- <div class="trama mt-1">
+ <div class="trama mt-1 fade-in">
+    <h2 class="section-title">Lo Spider-Verse</h2>
     <p>
         Spider-Man è un personaggio iconico dei fumetti creato da Stan Lee e Steve Ditko, ma l'eredità di questo supereroe si estende oltre il personaggio di Peter Parker. Nel vasto universo di Spider-Man, sono emersi diversi altri individui che hanno assunto il mantello dell'Uomo Ragno.
         
@@ -161,6 +165,31 @@
         /*open panel*/
         $(".hamburger").on('click', function(){
             $(".menu").toggleClass("menu--open");
+        });
+
+        // ScrollReveal animations
+        ScrollReveal().reveal('.fade-in', {
+            distance: '50px',
+            duration: 1000,
+            easing: 'ease-in-out',
+            origin: 'bottom',
+            reset: false
+        });
+
+        ScrollReveal().reveal('.slide-up', {
+            distance: '100px',
+            duration: 1200,
+            easing: 'cubic-bezier(.215, .61, .355, 1)',
+            origin: 'bottom',
+            reset: false,
+            delay: 200
+        });
+
+        ScrollReveal().reveal('.animazione', {
+            distance: '100px',
+            duration: 1000,
+            easing: 'cubic-bezier(.215, .61, .355, 1)',
+            interval: 300
         });
 
     });
