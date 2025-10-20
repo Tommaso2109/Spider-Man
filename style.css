@@ -79,7 +79,6 @@ p{line-height: 30px; color: #666; font-weight: 300; font-size: 23px;}
 
 .text-contatti{ font-size: 20px; display:none !important;}
 
-/* Al termine del file o dopo tutte le regole, aggiungi questa media query per sovrascrivere la visibilità su mobile */
 @media (max-width: 768px) {
     .text-contatti {
         display: block !important;
@@ -898,9 +897,9 @@ footer {
     text-align: center;
     padding: 10px;
     text-shadow:
-        -1px -1px 0 #000, /* Contorno in alto a sinistra */
-        1px -1px 0 #000, /* Contorno in alto a destra */
-        -1px 1px 0 #000, /* Contorno in basso a sinistra */
+        -1px -1px 0 #000, 
+        1px -1px 0 #000, 
+        -1px 1px 0 #000, 
         1px 1px 0 #000;
 }
 .col img{height: 50px;width: 50px;}
@@ -1432,8 +1431,6 @@ footer {
   }
 }
 
-
-/* From Uiverse.io by TechByElijah */ 
 .center {
   position: absolute;
   transform: translateX(-50%);
